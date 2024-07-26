@@ -18,6 +18,7 @@ Este projeto foi desenvolvido para servir como um linker para informações sobr
 │   └── script.js
 └── imagens
     └── foto-perfil.png
+```
 
 ## Sobre Mim
 
