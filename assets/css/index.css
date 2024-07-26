@@ -1,22 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.rubik-informativos {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }  
+
+  * {
+    font-weight: lighter;
+    text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.5);
+}
+
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: linear-gradient(45deg, #ffcc33, #fe8330);
+}
+
+.informativos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    background-color: transparent;
+    font-size: 18px;
+    top: 40px;
+    position: fixed;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500; /* Escolha o peso desejado */
+}
+
+.informativos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .linkadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
+    background-color: transparent;
 }
 
 ul {
     list-style-type: none;
+    width: 80%;
     padding: 0;
 }
 
-button {
+ul li {
+    margin-bottom: 15px;
+}
+
+.btn {
+    border: 3px solid white;
+    background-color: transparent;
+    font-size: 24px;
+    color: white;
+    padding: 5px 15px;
+    font-family: 'Palatino Linotype', serif;
+    position: relative;
     cursor: pointer;
-    width: 50%;
+    outline: none;
+    width: 80%;
+    top: 70px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #FFAD00;
+}
+
+footer {
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
 }
