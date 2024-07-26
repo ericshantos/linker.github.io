@@ -1,10 +1,6 @@
-Claro, Eric! Aqui está um exemplo de como pode ser o conteúdo do seu README.md:
+<h1 align="center">Linker Profissional - Eric dos Santos</h1>
 
----
-
-# Linker Profissional - Eric dos Santos
-
-Bem-vindo ao meu projeto de front end! Este projeto foi desenvolvido para servir como um linker para informações sobre minha carreira profissional, habilidades e projetos. Ele foi projetado para fornecer uma visão rápida e eficiente das minhas competências e realizações, facilitando o acesso para recrutadores e interessados.
+Este projeto foi desenvolvido para servir como um linker para informações sobre minha carreira profissional, habilidades e projetos. Ele foi projetado para fornecer uma visão rápida e eficiente das minhas competências e realizações, facilitando o acesso para recrutadores e interessados.
 
 ## Tecnologias Utilizadas
 
