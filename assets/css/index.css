@@ -35,14 +35,31 @@ body {
     top: 40px;
     position: fixed;
     font-family: 'Rubik', sans-serif;
-    font-weight: 500; /* Escolha o peso desejado */
+    font-weight: 500;
 }
+
+.sobre-min p,
+.sobre-min h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-min p {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.sobre-min h1 {
+    margin-bottom: 10px;
+}
+
 
 .informativos img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .linkadores {
@@ -76,7 +93,7 @@ ul li {
     cursor: pointer;
     outline: none;
     width: 80%;
-    top: 70px;
+    top: 100px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
