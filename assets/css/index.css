@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-.rubik-informativos {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-  }  
-
-  * {
-    font-weight: lighter;
-    text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.5);
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-image: linear-gradient(45deg, #ffcc33, #fe8330);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .informativos {
@@ -29,42 +30,65 @@ body {
     align-items: center;
     text-align: center;
     color: white;
-    margin-bottom: 20px;
     background-color: transparent;
     font-size: 18px;
-    top: 40px;
-    position: fixed;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
+    margin-top: 40px;
 }
 
-.sobre-min p,
-.sobre-min h1 {
+.sobre-mim p,
+.sobre-mim h1 {
     margin: 0;
     padding: 0;
 }
 
-.sobre-min p {
+.sobre-mim p {
     margin-bottom: 5px;
     font-size: 16px;
 }
 
-.sobre-min h1 {
+.sobre-mim h1 {
     margin-bottom: 10px;
 }
-
 
 .informativos img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh; /* Ajuste conforme necessário para o comprimento desejado */
+    position: relative;
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o tamanho do slider */
+    background-color: transparent;
+}
+
+.slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave entre slides */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; /* Impede que o slide encolha */
+    box-sizing: border-box;
 }
 
 .linkadores {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -72,16 +96,44 @@ body {
     background-color: transparent;
 }
 
-ul {
+.lista-links {
     list-style-type: none;
     width: 80%;
     padding: 0;
+    background-color: transparent;
+    margin-bottom: 170px;
+}
+
+.sobre-mim {
+    display: flex;
+    flex-direction: column; /* Certifica-se de que o parágrafo fica abaixo da lista */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
 }
 
 ul li {
     margin-bottom: 15px;
+    background-color: transparent;
 }
 
+.informacoes-sobre-mim {
+    margin-left: 70px;
+    margin-bottom: 40px;
+    width: 400px;
+    text-align: left;
+}
+
+.sobre-mim p {
+    font-size: 22px;
+}
+
+.posicao-caixa {
+    margin-bottom: 70px;
+}
+
+/* Propriedades dos botões de e1 aplicadas aos botões de e2 */
 .btn {
     border: 3px solid white;
     background-color: transparent;
@@ -89,17 +141,53 @@ ul li {
     color: white;
     padding: 5px 15px;
     font-family: 'Palatino Linotype', serif;
-    position: relative;
     cursor: pointer;
     outline: none;
     width: 80%;
-    top: 100px;
+    height: 90px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    position: relative; /* Para manter a posição específica de e2 */
 }
 
 .btn:hover {
     background-color: white;
     color: #FFAD00;
+}
+
+.btn-especial {
+    border: 3px solid white;
+    background-color: white;
+    border-radius: 20px;  
+    padding: 10px 20px;   
+    color: #FFAD00;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+    display: inline-block; 
+    margin-top: 20px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease;
+    animation-name: btn-pusante;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes btn-pusante {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.btn-especial:hover {
+    color: white;
+    background-color: transparent;
 }
 
 footer {
