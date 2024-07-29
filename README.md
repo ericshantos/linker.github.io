@@ -6,6 +6,7 @@ Este projeto foi desenvolvido para servir como um linker para informações sobr
 
 - **HTML5**: Para a estruturação do conteúdo da página.
 - **CSS3**: Para estilização e layout visual.
+- **JavaScript**: Interatividade para como usuário.
 
 ## Estrutura do Projeto
 
