@@ -238,6 +238,16 @@ footer a {
     .informacoes-sobre-mim {
         width: 90%;
     }
+
+    .sobre-mim {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+        height: 25px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -262,5 +272,11 @@ footer a {
 
     .sobre-mim {
         padding: 10px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+        height: 20px;
     }
 }
