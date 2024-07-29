@@ -124,17 +124,13 @@ ul li {
 }
 
 .informacoes-sobre-mim {
-    width: 100%;
     max-width: 80%;
     margin-bottom: 40px;
+    list-style-type: none;
 }
 
 .sobre-mim p {
     font-size: 22px;
-}
-
-.posicao-caixa {
-    margin-bottom: 70px;
 }
 
 .btn {
