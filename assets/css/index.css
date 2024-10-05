@@ -148,12 +148,19 @@ main {
 }
 
 footer {
+    display: flex;
     background-color: transparent;
     position: relative;
     color: black;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    text-align: center;
+    height: 7%;
     bottom: 0;
+}
+
+#conteudo-footer {
+    text-align: center;
 }
 
 footer a {
