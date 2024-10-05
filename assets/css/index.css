@@ -11,12 +11,14 @@
     --cor-background-color-foto: transparent;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
     background-image: linear-gradient(45deg, #006769, #40A578, #9DDE8B, #E6FF94);
     background-size: 500% 100%;
     animation: degrade-animado 5s infinite alternate;
