@@ -7,74 +7,45 @@
         <link rel="stylesheet" href="assets/css/index.css" >
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        <title>Eric dos Santos | Linker</title>
+        <title>Eric dos Santos | Desenvolvedor Full Stack</title>
+
+        <script src="assets/js/scripts.js" defer></script>
     </head>
     <body>
-        <div class="container">
-            <div alt="informativos" class="informativos">
-                <img alt="foto de perfil" src="assets/imgs/foto-perfil.JPG" />
-                <div class="sobre-min">
-                    <p>Olá, eu sou</p>
-                    <h1>
-                        <b>Eric Santos</b>
-                    </h1>
-                </div>
-                <button class="btn-especial">
-                    Sobre mim
-                </button>
-            </div>
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide linkadores">
-                        <ul class="lista-links">
-                            <li>
-                                <a alt="LinkedIn" href="https://www.linkedin.com/in/eric-sh/" >
-                                    <button class="btn">
-                                        <p>
-                                            LinkedIn
-                                        </p>
-                                    </button>
-                                </a>
-                            </li>
-                            <li>
-                                <a alt="github" href="https://github.com/ericshantos">
-                                    <button class="btn">
-                                        <p>
-                                            GitHub
-                                        </p>
-                                    </button>
-                                </a>
-                            </li>
-                        </ul>
+        <main>
+            <section alt="apresentacao" id="apresentacao" class="segoe-ui">
+                <div class="conteudo">
+                    <div class="foto-perfil">
+                        <img alt="foto de perfil" id="foto-perfil" src="assets/imgs/foto-perfil.JPG" />
                     </div>
-                    <div class="slide sobre-mim">
-                            <ul class="informacoes-sobre-mim">
-                                <li>
-                                    😃 Desenvolvedor Python.
-                                </li>
-                                <li>
-                                    👨🏾‍💻 Um entusiasta da capacidade da tecnologia em mudar paradigmas.
-                                </li>
-                                <li>
-                                    ⚙️ Formado em Tecnologia da Informação.
-                                </li>
-                                <li>
-                                    💽 Cursando Ciências da Computação.
-                                </li>
-                                <li>
-                                    📌 De São Paulo, Brasil.
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="eu">
+                        <p>Olá, eu sou</p>
+                        <h1>
+                            <b>Eric Santos</b>
+                        </h1>
                     </div>
+                    <div class="capa"></div>
                 </div>
-            </div>
-        </div>
+            </section>
+            <section id="linkador">
+                <ul class="links">
+                    <li>
+                        <a alt="LinkedIn" href="https://www.linkedin.com/in/eric-sh/" >
+                            <button id="btn-linkedin" class="btn-link">LinkedIn</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a alt="github" href="https://github.com/ericshantos">
+                            <button id="btn-github" class="btn-link">GitHub</button>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
         <footer>
-            <div>
+            <div class="segoe-ui">
                 &copy; 2024 - Todos os direitos reservados | <a alt="Licença MIT" href="https://opensource.org/license/mit" target="_blank">License MIT</a>
             </div>
         </footer>
-        <script src="assets/js/scripts.js"></script>
     </body>
 </html>
