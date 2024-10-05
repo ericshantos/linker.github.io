@@ -1,276 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --tamanho-foto-perfil: 150px;
+    --z-index-conteudo: 10;
+    --border-radio-foto: 50%;
+    --cor-background-color-foto: transparent;
+}
+
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100vh;
-    margin: 0;
-    background-image: linear-gradient(45deg, #ffcc33, #fe8330);
+    width: 100vw;
+    background-image: linear-gradient(45deg, #006769, #40A578, #9DDE8B, #E6FF94);
+    background-size: 500% 100%;
+    animation: degrade-animado 5s infinite alternate;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-}
-
-.informativos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background-color: transparent;
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    margin-top: 40px;
-}
-
-.sobre-min p,
-.sobre-min h1 {
-    margin: 0;
-    padding: 0;
-}
-
-.sobre-min p {
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.sobre-min h1 {
-    margin-bottom: 10px;
-}
-
-.informativos img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 60vh;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-}
-
-.slides {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.linkadores {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    background-color: transparent;
-}
-
-.lista-links {
-    list-style-type: none;
-    width: 80%;
-    padding: 0;
-}
-
-.sobre-mim {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-ul li {
-    margin-bottom: 15px;
-    background-color: transparent;
-}
-
-.informacoes-sobre-mim {
-    max-width: 80%;
-    margin-bottom: 40px;
-    list-style-type: none;
-}
-
-.sobre-mim p {
-    font-size: 22px;
-}
-
-.btn {
-    border: 3px solid white;
-    background-color: transparent;
-    font-size: 24px;
-    color: white;
-    padding: 5px 15px;
-    font-family: 'Palatino Linotype', serif;
-    cursor: pointer;
-    outline: none;
-    width: 80%;
-    height: 90px;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    position: relative;
-}
-
-.btn:hover {
-    background-color: white;
-    color: #FFAD00;
-}
-
-.btn-especial {
-    border: 3px solid white;
-    background-color: white;
-    border-radius: 20px;  
-    padding: 10px 20px;   
-    color: #FFAD00;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-    font-size: 18px;
-    outline: none;
-    text-align: center;
-    display: inline-block; 
-    margin-top: 20px;
-    transition: color 0.5s ease-in-out, background-color 0.5s ease;
-    animation-name: btn-pusante;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes btn-pusante {
+@keyframes degrade-animado {
     0% {
-        transform: scale(1);
+        background-position-x: 0%;
     }
-
     100% {
-        transform: scale(1.15);
+        background-position-x: 100%;
     }
 }
 
-.btn-especial:hover {
-    color: white;
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: transparent;
+    height: 100%;
+    width: 100%;
+}
+
+#apresentacao {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 40%;
+}
+
+.conteudo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+    width: 20%;
+    height: 90%;
+    top: 15%;
+    gap: 10px;
+}
+
+.eu {
+    background-color: transparent;
+    position: relative;
+    text-align: center;
+    z-index: var(--z-index-conteudo);
+    margin-top: 15px;
+}
+
+.capa {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    bottom: 9%;
+    border-radius: 15px;
+    background-color: var(--cor-background-color-foto);
+}
+
+.foto-perfil {
+    background-color: aliceblue;
+    height: var(--tamanho-foto-perfil);
+    width: var(--tamanho-foto-perfil);
+    z-index: var(--z-index-conteudo);
+    border-radius: var(--border-radio-foto);
+    padding: 5px;
+}
+
+#foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radio-foto);
+    object-fit: cover;
+    z-index: 1;
+}
+
+#linkador {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.links {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 70%;
+    width: 90%;
+    gap: 15px;
+    transform: translateY(-5%);
+}
+
+.links li {
+    position: relative;
+    background-color: black;
+    height: 20%;
+    width: 40%;
+}
+
+.btn-link {
+    position: relative;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.5);
+    font-size:medium;
+}
+
+.btn-link:checked {
+    transform: translateX(-0px) translateY(-0px);
+}
+
+.posicao-inicial {
+    transform: translateX(0px) translateY(0px); 
 }
 
 footer {
-    color: white;
     background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
+    position: relative;
+    color: black;
     width: 100%;
-    position: fixed;
+    text-align: center;
     bottom: 0;
 }
 
 footer a {
-    color: white;
+    color: black;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
+.segoe-ui {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        height: calc(100vh - 50px);
     }
 
-    .informativos img {
-        width: 120px;
-        height: 120px;
+    .conteudo {
+        width:  80%;
+        justify-content: center;
     }
 
-    .btn {
-        font-size: 20px;
-        height: 70px;
-    }
-
-    .btn-especial {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    .sobre-mim p {
-        font-size: 18px;
-    }
-
-    .informacoes-sobre-mim {
-        width: 90%;
-        font-size: 16px;
-    }
-
-    .sobre-mim {
-        padding: 15px;
-        font-size: 18px;
+    .links li {
+        height: 15%;
+        width: 80%;
+        bottom: 8%;
     }
 
     footer {
-        font-size: 14px;
-        height: 25px;
+        font-size: small;
     }
 }
-
-@media (max-width: 480px) {
-    .btn {
-        font-size: 18px;
-        height: 60px;
-    }
-
-    .btn-especial {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-
-    .sobre-mim p {
-        font-size: 16px;
-    }
-
-    .informacoes-sobre-mim {
-        width: 100%;
-        font-size: 14px;
-        margin-left: 0;
-    }
-
-    .sobre-mim {
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    footer {
-        font-size: 12px;
-        height: 20px;
-    }
-}
+  
