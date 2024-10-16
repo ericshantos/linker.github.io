@@ -134,6 +134,7 @@ main {
     border: 2px solid black;
     height: 100%;
     width: 100%;
+    padding: 10px;
     transform: translateX(-5px) translateY(-5px);
     box-shadow: rgba(0, 0, 0, 0.5);
     font-size:medium;
